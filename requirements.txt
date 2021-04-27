@@ -1,0 +1,3 @@
+dask>=2021.02.0
+distributed>=2021.02.0
+lithops>=2.3.1
