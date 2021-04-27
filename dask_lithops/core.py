@@ -211,15 +211,6 @@ class LithopsCluster(SpecCluster):
 
     
     def scale(self, n):
-        # A shim to maintain backward compatibility
-        # https://github.com/dask/distributed/issues/3054
-        #maximum = dask.config.get("kubernetes.count.max")
-        #if maximum is not None and maximum < n:
-        #    logger.info(
-        #        "Tried to scale beyond maximum number of workers %d > %d", n, maximum
-        #    )
-        #    n = maximum
-        # TODO
         return super().scale(n)
 
     async def _logs(self, scheduler=True, workers=True):
